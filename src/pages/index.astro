@@ -1,72 +1,13 @@
 ---
+import { Page } from '@layout';
 
+import About from './_sections/About.astro';
+import Blogs from './_sections/Blogs.astro';
+import Hero from './_sections/Hero.astro';
 ---
 
-<html lang="en" data-theme="catppuccin-mocha">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>frokonet.ch</title>
-  </head>
-  <body>
-    <section class="hero min-h-screen bg-base-200">
-      <div class="hero-content text-center">
-        <div class="max-w-md">
-          <h1>frokonet.ch</h1>
-          <p class="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In
-            deleniti eaque aut repudiandae et a id nisi.
-          </p>
-          <button class="btn btn-primary">Get Started</button>
-        </div>
-      </div>
-    </section>
-  </body>
-</html>
-
-<style is:global>
-  body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-  }
-
-  body,
-  html {
-    height: 100%;
-    overflow-x: hidden;
-    @apply scroll-smooth;
-  }
-
-  article {
-    @apply prose md:prose-xl;
-  }
-
-  a {
-    @apply no-underline;
-  }
-
-  h1,
-  h2,
-  h3 {
-    @apply text-primary;
-  }
-
-  h1 {
-    @apply mt-12 mb-8 !important;
-    @apply text-[2.24rem] md:text-[2.8rem] !important;
-    font-weight: 800 !important;
-  }
-
-  h2 {
-    @apply mt-8 mb-6 !important;
-    @apply text-[1.5rem] md:text-[1.8rem] !important;
-    font-weight: 700 !important;
-  }
-
-  .container {
-    @apply mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-12 lg:max-w-4xl lg:py-16 lg:px-8 xl:max-w-6xl;
-  }
-</style>
+<Page>
+  <Hero />
+  <Blogs />
+  <About />
+</Page>

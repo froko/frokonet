@@ -1,0 +1,34 @@
+---
+import './style.css';
+import { FormattedDate } from '@library';
+import Head from './Head.astro';
+import Navbar from './Navbar.astro';
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+
+<html lang="en" data-theme="catppuccin-mocha">
+  <Head title={title} description={description} img={heroImage} />
+  <body>
+    <Navbar />
+    <main>
+      <div class="container">
+        <article>
+          <img src={heroImage} alt="" />
+          <div>
+            <FormattedDate date={pubDate} />
+            {
+              updatedDate && (
+                <span>
+                  Last updated on <FormattedDate date={updatedDate} />
+                </span>
+              )
+            }
+          </div>
+          <h1>{title}</h1>
+          <slot />
+        </article>
+      </div>
+    </main>
+  </body>
+</html>

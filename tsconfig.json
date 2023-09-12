@@ -1,3 +1,13 @@
 {
-  "extends": "astro/tsconfigs/strict"
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "verbatimModuleSyntax": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@layout": ["./src/layout/index.ts"],
+      "@library": ["./src/library/index.ts"]
+    }
+  }
 }

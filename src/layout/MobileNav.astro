@@ -1,0 +1,17 @@
+---
+import { nav } from '../data/nav';
+import Hamburger from './Hamburger.astro';
+---
+
+<div class="dropdown dropdown-end md:hidden">
+  <Hamburger />
+  <ul tabindex={0} class="menu-compact menu dropdown-content rounded-box mt-4 w-52 bg-base-300 p-2">
+    {
+      nav.map((item) => (
+        <li>
+          <a href={item.slug}>{item.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</div>

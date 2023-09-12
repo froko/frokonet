@@ -1,0 +1,17 @@
+---
+import './style.css';
+import Head from './Head.astro';
+import Navbar from './Navbar.astro';
+
+const { title, description, img } = Astro.props;
+---
+
+<html lang="en" data-theme="catppuccin-mocha">
+  <Head title={title} description={description} img={img} />
+  <body>
+    <Navbar />
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

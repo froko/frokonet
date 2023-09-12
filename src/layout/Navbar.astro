@@ -1,0 +1,27 @@
+---
+import { nav } from '../data/nav';
+import MobileNav from './MobileNav.astro';
+import ThemeChange from './ThemeChange.astro';
+---
+
+<nav class="navbar sticky top-0 z-50 bg-base-100/80 backdrop-blur-sm">
+  <div class="flex-1">
+    <a href="/" class="flex items-center gap-4 p-2 font-bold hover:underline md:text-2xl">
+      <img src="/me.jpg" alt="Profile" class="h-9 w-9 rounded-full bg-base-200 md:h-12 md:w-12" />
+       frokonet.ch
+    </a>
+  </div>
+  <div class="flex-none">
+    <ul class="menu menu-horizontal hidden p-0 md:flex">
+      {
+        nav.map((item) => (
+          <li>
+            <a href={item.slug}>{item.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+    <ThemeChange />
+    <MobileNav />
+  </div>
+</nav>
