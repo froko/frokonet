@@ -1,0 +1,32 @@
+---
+import { Page } from '@layout';
+import { FormattedDate } from '@library';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<Page>
+  <div class="container">
+    <article>
+      <h1>All Blog Posts</h1>
+      <div class="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-2">
+        {
+          posts.map((post) => (
+            <a href={`/blog/${post.slug}/`}>
+              <div class="card w-full bg-base-200 shadow-xl duration-300 md:hover:scale-105 md:hover:shadow-2xl">
+                <figure>
+                  <img src={post.data.heroImage} alt="" />
+                </figure>
+                <div class="card-body">
+                  <h2 class="card-title">{post.data.title}</h2>
+                  <FormattedDate date={post.data.pubDate} />
+                </div>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </article>
+  </div>
+</Page>
