@@ -1,0 +1,34 @@
+# Dependencies
+node_modules
+
+# Build outputs
+dist
+
+# Editors
+.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Tooling
+.eslintcache
+.astro
+.vercel
+
+# Logs
+logs
+*.log
+.pnpm-debug.log*
+
+# dotenv environment variable files
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
