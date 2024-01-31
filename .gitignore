@@ -1,21 +1,37 @@
-# build output
-dist/
-# generated types
-.astro/
+# Dependencies
+node_modules
 
-# dependencies
-node_modules/
+# Build outputs
+dist
 
-# logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
+# Editors
+.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
 
+# Tooling
+.eslintcache
+.astro
 
-# environment variables
+# Logs
+logs
+*.log
+.pnpm-debug.log*
+
+# dotenv environment variable files
 .env
-.env.production
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
 
-# macOS-specific files
+# OS
 .DS_Store
+Thumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk

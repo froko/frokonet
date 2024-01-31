@@ -11,6 +11,8 @@ dependencies:
   astro:
     specifier: ^4.2.8
     version: 4.2.8(typescript@5.3.3)
+
+devDependencies:
   typescript:
     specifier: ^5.3.3
     version: 5.3.3
@@ -3342,7 +3344,6 @@ packages:
     resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
     engines: {node: '>=14.17'}
     hasBin: true
-    dev: false
 
   /unherit@3.0.1:
     resolution: {integrity: sha512-akOOQ/Yln8a2sgcLj4U0Jmx0R5jpIg2IUyRrWOzmEbjBtGzBdHtSeFKgoEcoH4KYIG/Pb8GQ/BwtYm0GCq1Sqg==}
