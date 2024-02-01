@@ -1,0 +1,60 @@
+:root {
+  --padding-card: 1rem;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body,
+html {
+  height: 100%;
+  overflow-x: hidden;
+  @apply scroll-smooth;
+}
+
+article {
+  @apply prose md:prose-xl;
+}
+
+article img {
+  @apply rounded-lg mt-0;
+}
+
+a {
+  @apply no-underline;
+}
+
+h1,
+h2,
+h3 {
+  @apply text-primary;
+}
+
+h1 {
+  @apply text-[2.24rem] md:text-[2.8rem] !important;
+  font-weight: 800 !important;
+}
+
+h2 {
+  @apply text-[1.5rem] md:text-[1.8rem] !important;
+  font-weight: 700 !important;
+}
+
+.card-title {
+  @apply mt-2;
+}
+
+figure {
+  @apply my-0;
+}
+
+img {
+  @apply w-full;
+}
+
+.container {
+  @apply mx-auto max-w-3xl px-2 sm:px-4 lg:max-w-4xl lg:px-8 xl:max-w-6xl;
+}
