@@ -1,0 +1,14 @@
+{
+  "singleQuote": true,
+  "semi": true,
+  "bracketSpacing": true,
+  "trailingComma": "none",
+  "overrides": [
+    {
+      "files": "*.astro",
+      "options": {
+        "printWidth": 160
+      }
+    }
+  ]
+}
