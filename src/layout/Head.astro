@@ -1,0 +1,53 @@
+---
+const siteInfo = {
+  title: 'frokonet.ch',
+  description: 'Personal portfolio site of Patrick Ineichen',
+  twitter: '@froko'
+};
+
+let { title } = Astro.props;
+let { description } = Astro.props;
+
+if (!title) {
+  title = siteInfo.title;
+}
+
+if (!description) {
+  description = siteInfo.description;
+}
+
+let { img } = Astro.props;
+const previewImage = `${Astro.site}${img || 'me.png'}`;
+---
+
+<head>
+  <!-- essential -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <!-- core -->
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="generator" content={Astro.generator} />
+
+  <!-- twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={previewImage} />
+  <meta name="twitter:image:alt" content={title} />
+  <meta name="twitter:creator" content={siteInfo.twitter} />
+  <meta name="twitter:site" content={siteInfo.twitter} />
+
+  <!-- open graph -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={previewImage} />
+  <meta property="og:image:alt" content={title} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={Astro.site} />
+
+  <!-- sitemap -->
+  <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+</head>
