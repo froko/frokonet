@@ -1,6 +1,6 @@
 ---
 import './style.css';
-import Head from './Head.astro';
+import { Head, NavBar } from '@components';
 
 const { title, description, img } = Astro.props;
 ---
@@ -8,6 +8,7 @@ const { title, description, img } = Astro.props;
 <html lang="en">
   <Head title={title} description={description} img={img} />
   <body>
+    <NavBar />
     <main>
       <slot />
     </main>

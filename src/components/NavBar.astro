@@ -1,0 +1,22 @@
+---
+import { nav } from '@data';
+import ThemeChange from './ThemeChange.astro';
+---
+
+<nav class="navbar sticky top-0 z-10 backdrop-blur-lg backdrop-filter bg-opacity-20">
+  <div class="flex-1">
+    <a href={Astro.site} class="font-bold text-xl md:text-2xl">frokonet.ch</a>
+  </div>
+  <div class="flex-none">
+    <ul class="menu menu-horizontal hidden p-0 md:flex">
+      {
+        nav.map((item) => (
+          <li>
+            <a href={item.slug}>{item.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+    <ThemeChange />
+  </div>
+</nav>
