@@ -1,8 +1,12 @@
 ---
 import './style.css';
+import Head from './Head.astro';
+
+const { title, description, img } = Astro.props;
 ---
 
 <html lang="en">
+  <Head title={title} description={description} img={img} />
   <body>
     <main>
       <slot />
