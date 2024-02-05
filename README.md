@@ -1,3 +1,3 @@
 # frokonet.ch
 
-Personal portfolio webiste of Patrick Ineichen
+Personal portfolio website of Patrick Ineichen
