@@ -34,7 +34,7 @@ const previewImage = `${Astro.site}${img || 'me.png'}`;
   <!-- essential -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
   <!-- core -->
   <title>{title}</title>
@@ -60,4 +60,7 @@ const previewImage = `${Astro.site}${img || 'me.png'}`;
 
   <!-- sitemap -->
   <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+
+  <!-- custom -->
+  <slot />
 </head>

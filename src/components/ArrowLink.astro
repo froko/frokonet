@@ -1,0 +1,19 @@
+---
+import { ArrowLeft } from './icons';
+
+export interface Props {
+  href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<div class="flex my-4">
+  <span class="grow"></span>
+  <div class="flex duration-200 md:hover:scale-110">
+    <ArrowLeft />
+    <a href={href} class="w-100 text-xl font-bold md:hover:cursor-pointer">
+      <slot />
+    </a>
+  </div>
+</div>
