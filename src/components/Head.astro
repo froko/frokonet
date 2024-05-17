@@ -21,16 +21,6 @@ const previewImage = `${Astro.site}${img || 'me.png'}`;
 ---
 
 <head>
-  <script is:inline>
-    if (localStorage.getItem('theme') === null) {
-      document.documentElement.setAttribute('data-theme', 'light');
-    } else document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'));
-  </script>
-  <script>
-    import { themeChange } from 'theme-change';
-    themeChange();
-  </script>
-
   <!-- essential -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
