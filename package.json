@@ -24,8 +24,7 @@
     "daisyui": "^4.11.1",
     "preact": "^10.22.0",
     "sharp": "^0.33.4",
-    "tailwindcss": "^3.4.3",
-    "theme-change": "^2.5.0"
+    "tailwindcss": "^3.4.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.2.0",
@@ -33,6 +32,7 @@
     "eslint": "^9.2.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-astro": "^1.2.0",
+    "globals": "^15.2.0",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
     "prettier-plugin-tailwindcss": "^0.5.14",

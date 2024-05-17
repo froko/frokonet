@@ -8,7 +8,7 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueO
 
 <section id="blogs" class="container pt-20">
   <article>
-    <h1>Blogs</h1>
+    <h1>Blog</h1>
     <div class="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-2">
       {
         posts.map((post) => (

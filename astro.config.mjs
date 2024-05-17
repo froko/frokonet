@@ -8,5 +8,6 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://frokonet.ch',
+  output: 'static',
   integrations: [tailwind(), preact(), mdx(), sitemap()]
 });
