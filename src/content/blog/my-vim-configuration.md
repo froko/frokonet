@@ -14,29 +14,34 @@ There are a lot of configurations out there, but I've tried to keep mine as slim
 syntax on
 
 " Basic settings
-set encoding=UTF-8
 set nocompatible
+set encoding=UTF-8
+set hidden
+set belloff=all
+set mouse=a
+let mapleader=' '
+
+" Appearance
+set cursorline
+set number relativenumber
+set nowrap
+set showmatch
+set termguicolors
+
+" Clipboard settings
+set clipboard+=unnamed
+set go+=a
+
+" Backup settings
 set noswapfile
 set nobackup
 set nowritebackup
-set termguicolors
-set hidden
-set nowrap
-set number relativenumber
-set showmatch
-set cursorline
-set cursorcolumn
-set belloff=all
-set timeoutlen=500
-set mouse=a
-set spelllang=en_us
 
 " Tab settings
 set smarttab
 set smartindent
 set expandtab
-set tabstop=2 softtabstop=2
-set shiftwidth=2
+set tabstop=2 softtabstop=2 shiftwidth=2
 
 " Search settings
 set hlsearch
@@ -51,137 +56,50 @@ set wildmode=longest,list,full
 " Fix splitting
 set splitbelow splitright
 
-" Remove trailing white space on save
-autocmd BufWritePre * %s/\s\+$//e
+" Standard bindings
+inoremap jk <Esc>
+nnoremap L $
+nnoremap H ^
+
+" Buffers
+nnoremap bj :bprev<CR>
+nnoremap bk :bnext<CR>
+nnoremap bd :bd<CR>
+nnoremap bD :bd!<CR>
+nnoremap <Space><Space> :ls<CR>:b<Space>
+
+" Splits
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap sd <C-w>c
+
+" Alias replace all to S
+nnoremap <Leader>mh :%s//gI<Left><Left><Left>
+
+" Move block
+xnoremap <Down> :move'>+<CR>gv=gv
+xnoremap <Up> :move-2<CR>gv=gv
+
+" Netrw
+let g:netrw_banner = 0
+let g:netrw_winsize = 25
+nnoremap <Leader>e :Lex<CR>
+
+" Autocommands
+autocmd bufwritepre * %s/\s\+$//e " remove trailing white space on save
+autocmd vimresized * wincmd =     " auto-resize splits when vim gets resized
 
 " Plugins
 call plug#begin()
-  Plug 'mhinz/vim-startify'
   Plug 'catppuccin/vim', { 'as': 'catppuccin' }
-  Plug 'lambdalisue/nerdfont.vim'
   Plug 'vim-airline/vim-airline'
-  Plug 'freed-wu/airline-renderer-nerdfont.vim'
-  Plug 'lambdalisue/fern.vim'
-  Plug 'lambdalisue/fern-renderer-nerdfont.vim'
-  Plug 'ctrlpvim/ctrlp.vim'
-  Plug 'liuchengxu/vim-which-key'
-  Plug 'editorconfig/editorconfig-vim'
-  Plug 'ervandew/supertab'
-  Plug 'tpope/vim-commentary'
+  Plug 'tribela/vim-transparent'
+  Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
-
-filetype plugin indent on
-source ~/.vim/bindings.vim
-source ~/.vim/settings.vim
 
 " Color scheme
 colorscheme catppuccin_mocha
-```
-
-I've defined some custom key bindings in the `.vim/bindings.vim` file:
-
-```vim
-" Standard bindings
-nnoremap gl $
-nnoremap gh 0
-nnoremap gk H
-nnoremap gj L
-inoremap jk <Esc>
-
-" Buffers
-nnoremap bh :bprev<CR>
-nnoremap bl :bnext<CR>
-nnoremap bd :bd<CR>
-
-" Splits
-nnoremap ss <C-W>v
-nnoremap sh <C-W>s
-
-" Split navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-
-" Alias replace all to S
-nnoremap S :%s//gI<Left><Left><Left>
-
-" which-key bindings
-let g:which_key_map = {}
-
-let g:which_key_map['w'] = {
-      \ 'name' : '+windows',
-      \ 'd' : ['<C-W>c', 'delete-window'],
-      \ '-' : ['<C-W>s', 'split-window-below'],
-      \ '|' : ['<C-W>v', 'split-window-right'],
-      \ 'h' : ['<C-W>h', 'window-left'],
-      \ 'j' : ['<C-W>j', 'window-below'],
-      \ 'l' : ['<C-W>l', 'window-right'],
-      \ 'k' : ['<C-W>k', 'window-up'],
-      \ 'H' : ['<C-W>5<', 'expand-window-left'],
-      \ 'J' : [':resize +5', 'expand-window-below'],
-      \ 'L' : ['<C-W>5>', 'expand-window-right'],
-      \ 'K' : [':resize -5', 'expand-window-up'],
-      \ '=' : ['<C-W>=', 'balance-window'],
-      \ }
-
-let g:which_key_map['b'] = {
-      \ 'name' : '+buffers',
-      \ 'n' : [':enew', 'new buffer'],
-      \ 'j' : [':bprev', 'move to previous buffer'],
-      \ 'k' : [':bnext', 'move to next buffer'],
-      \ 'd' : [':bd', 'close current buffer'],
-      \ 'l' : [':CtrlPBuffer', 'list other buffers'],
-      \ }
-
-let g:which_key_map['t'] = {
-      \ 'name' : '+toggles',
-      \ 'l' : [':set nowrap!', 'Line Wrap'],
-      \ 's' : [':set nospell!', 'Spell Check'],
-      \ }
-
-let g:which_key_map['p'] = {
-      \ 'name' : '+CtrlP',
-      \ 'b' : [':CtrlPBuffer', 'Buffers'],
-      \ 'm' : [':CtrlPMixed', 'Mixed'],
-      \ 's' : [':CtrlPMRU', 'MRU'],
-      \ }
-
-let g:which_key_map['f'] = [':Fern . -drawer -reveal=% -toggle -width=35', 'Fern']
-
-```
-
-... and finally the plugin configuration in the `.vim/settings.vim` file:
-
-```vim
-" Airline configuration
 let g:airline_theme = 'catppuccin_mocha'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-
-
-"Fern configuration
-let g:fern#default_hidden = 1
-let g:fern#renderer = 'nerdfont'
-
-
-" CtrlP configuration
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
-  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
-\}
-let g:ctrlp_working_path_mode = 'r'
-
-
-" WhichKey configuration
-let g:which_key_use_floating_win = 0
-let g:mapleader = "\<Space>"
-
-autocmd! FileType which_key
-autocmd FileType which_key set laststatus=0 noshowmode noruler
-  \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
-
-call which_key#register('<Space>', "g:which_key_map")
-nnoremap <silent> <leader> :silent <c-u> :silent WhichKey '<Space>'<CR>
-vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
 ```
