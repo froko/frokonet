@@ -8,7 +8,7 @@ export const nav = [
     slug: '/bookmarks'
   },
   {
-    title: 'Our Cats',
+    title: 'Joslyn & Jerome',
     slug: '/cats'
   },
   {

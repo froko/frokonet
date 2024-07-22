@@ -2,6 +2,13 @@
 export default {
   content: ['./src/**/*.{astro,tsx}'],
   plugins: [require('@tailwindcss/typography'), require('daisyui')],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Lato', 'sans-serif']
+      }
+    }
+  },
   daisyui: {
     themes: [
       {
