@@ -1,7 +1,10 @@
 /** @type {import('tailwindcss').Config} */
+import typography from '@tailwindcss/typography';
+import daisyui from 'daisyui';
+
 export default {
   content: ['./src/**/*.{astro,tsx}'],
-  plugins: [require('@tailwindcss/typography'), require('daisyui')],
+  plugins: [typography, daisyui],
   theme: {
     extend: {
       fontFamily: {
