@@ -1,4 +1,6 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
+
 const siteInfo = {
   title: 'frokonet.ch',
   description: 'Personal portfolio site of Patrick Ineichen',
@@ -56,4 +58,6 @@ const previewImage = `${Astro.site}${img || 'me.png'}`;
 
   <!-- custom -->
   <slot />
+
+  <ViewTransitions />
 </head>

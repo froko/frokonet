@@ -1,18 +1,58 @@
 ---
 import { Page } from '@layout';
-import { Image } from 'astro:assets';
+import { getImage, Image } from 'astro:assets';
 
 const imageFiles = await Astro.glob('/public/cats/*');
 ---
 
 <Page title="Joslyn & Jerome">
   <div class="container">
-    <article>
-      <h1>Joslyn & Jerome</h1>
+    <h1 class="px-4">Joslyn & Jerome</h1>
+    <p class="p-4">
+      Our two Ragdolls named Joslyn and Jerome live with us since August 2022. We got them from the
+      <a href="https://kandergarden.ch/" class="text-white font-bold">Kandergarden Catery</a>.
+    </p>
 
-      <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-3 mb-5 mx-auto w-full px-4">
-        {imageFiles.map((img) => <Image src={img.default} width="600" alt="Cats" class="mb-3 w-full rounded" />)}
-      </div>
-    </article>
+    <div class="columns-1 gap-3 mx-auto w-full px-4 sm:hidden">
+      {imageFiles.map((img) => <Image src={img.default} width="300" alt="Cats" class="mb-3 w-full rounded" />)}
+    </div>
+    <div id="cats" class="hidden sm:block sm:columns-2 md:columns-3 lg:columns-4 gap-3 mb-5 mx-auto w-full px-4">
+      {
+        imageFiles.map(async (img) => {
+          const optimizedImage = await getImage({ src: img.default, height: 800 });
+          return (
+            <a href={optimizedImage.src} data-pswp-width={optimizedImage.attributes.width} data-pswp-height={optimizedImage.attributes.height}>
+              <Image src={img.default} width="300" alt="Cats" class="mb-3 w-full rounded" />
+            </a>
+          );
+        })
+      }
+    </div>
   </div>
 </Page>
+
+<script>
+  import 'photoswipe/style.css';
+
+  import pswpModule from 'photoswipe';
+  import PhotoSwipeLightbox from 'photoswipe/lightbox';
+
+  declare global {
+    interface Window {
+      lightbox?: unknown;
+    }
+  }
+  window.lightbox = new PhotoSwipeLightbox({
+    pswpModule,
+    children: 'a',
+    gallery: '#cats'
+  });
+
+  document.addEventListener(
+    'astro:page-load',
+    () => {
+      if (window.lightbox) (window.lightbox as { init: () => unknown }).init();
+    },
+    { once: false }
+  );
+</script>
