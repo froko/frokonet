@@ -1,6 +1,5 @@
 ---
 import { FormattedDate } from '@library';
-import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 6);
@@ -8,24 +7,16 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueO
 
 <section id="blogs" class="container pt-20">
   <article>
-    <h1>Blog</h1>
-    <div class="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-2">
+    <h1>Recent Blog Posts</h1>
       {
         posts.map((post) => (
+          <FormattedDate date={post.data.pubDate} />
           <a href={`/blog/${post.slug}/`}>
-            <div class="card w-full bg-base-200 shadow-xl duration-300 md:hover:scale-105 md:hover:shadow-2xl">
-              <figure>
-                <Image src={post.data.cover} alt={post.data.coverAlt} />
-              </figure>
-              <div class="card-body">
-                <h2 class="card-title">{post.data.title}</h2>
-                <FormattedDate date={post.data.pubDate} />
-              </div>
-            </div>
+            <h2 class="my-0">{post.data.title}</h2>
           </a>
+          <p class="mt-2 mb-10">{post.data.description}</p>
         ))
       }
-    </div>
     <!--
     <div class="mt-8 flex place-content-end">
       <a href="/blog/" class="btn btn-primary">View All</a>

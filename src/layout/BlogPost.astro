@@ -28,6 +28,7 @@ const { title, description, pubDate, updatedDate, cover, coverAlt } = Astro.prop
             }
           </div>
           <h1>{title}</h1>
+          <p class="font-bold">{description}</p>
           <slot />
           <ArrowLink href="/blog">All Blog Posts</ArrowLink>
         </article>
