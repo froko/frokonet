@@ -24,7 +24,7 @@ article img {
 }
 
 a {
-  @apply no-underline;
+  @apply no-underline text-white;
 }
 
 h1,
