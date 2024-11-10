@@ -15,18 +15,18 @@ export default tseslint.config(
     languageOptions: {
       globals: {
         ...globals.browser,
-        ...globals.node
-      }
-    }
+        ...globals.node,
+      },
+    },
   },
   {
     plugins: { 'simple-import-sort': simpleImportSort },
     rules: {
       'simple-import-sort/imports': 'error',
-      'simple-import-sort/exports': 'error'
-    }
+      'simple-import-sort/exports': 'error',
+    },
   },
   {
-    ignores: ['.astro', 'dist']
-  }
+    ignores: ['.astro', 'dist'],
+  },
 );

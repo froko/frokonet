@@ -1,13 +1,11 @@
 {
   "singleQuote": true,
-  "semi": true,
   "bracketSpacing": true,
-  "trailingComma": "none",
   "overrides": [
     {
-      "files": "*.astro",
+      "files": "*.md",
       "options": {
-        "printWidth": 160
+        "proseWrap": "always"
       }
     }
   ]
