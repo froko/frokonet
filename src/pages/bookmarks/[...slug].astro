@@ -1,0 +1,41 @@
+---
+import { type Link, LinksWithTag, LinkTags } from '@data';
+import { Page } from '@layout';
+
+import LinkCard from './_LinkCard.astro';
+
+export const prerender = true;
+const { slug } = Astro.params;
+
+export function getStaticPaths() {
+  return LinkTags.map((tag) => ({ params: { slug: tag.name } }));
+}
+
+if (!slug) {
+  return Astro.redirect('/bookmarks');
+}
+
+const links = slug ? LinksWithTag(slug) : [];
+
+if (links.length === 0) {
+  return Astro.redirect('/bookmarks');
+}
+---
+
+<Page title="Bookmarks">
+  <div class="container">
+    <h1>Bookmarks: {slug}</h1>
+    <div class="mt-4">
+      {
+        LinkTags.map((tag) => (
+          <a href={tag.url} class="badge badge-secondary mr-2 mt-2 duration-200 md:hover:scale-110">
+            {tag.name}
+          </a>
+        ))
+      }
+    </div>
+    <div class="mt-8">
+      {links.map((link: Link) => <LinkCard {...link} />)}
+    </div>
+  </div>
+</Page>
