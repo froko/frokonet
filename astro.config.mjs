@@ -8,5 +8,5 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://frokonet.ch',
   output: 'static',
-  integrations: [tailwind(), preact(), mdx(), sitemap()]
+  integrations: [tailwind(), preact(), mdx(), sitemap()],
 });

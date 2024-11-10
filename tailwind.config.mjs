@@ -8,9 +8,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Lato', 'sans-serif']
-      }
-    }
+        sans: ['Lato', 'sans-serif'],
+      },
+    },
   },
   daisyui: {
     themes: [
@@ -24,9 +24,9 @@ export default {
           info: '#7dc4e4', // sapphire
           success: '#a6da95', // green
           warning: '#eed49f', // yellow
-          error: '#ed8796' // red
-        }
-      }
-    ]
-  }
+          error: '#ed8796', // red
+        },
+      },
+    ],
+  },
 };
