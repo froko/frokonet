@@ -92,6 +92,163 @@ const links = [
     icon: 'https://vitest.dev/logo.svg',
     tags: ['Frontend', 'Testing', 'Quality'],
   },
+  {
+    name: 'Component Party',
+    description: 'A web framwork comparison site',
+    url: 'https://component-party.dev/',
+    icon: 'https://component-party.dev/favicon.png',
+    tags: ['Frontend'],
+  },
+  {
+    name: 'Cypress',
+    description: 'Test. Automate. Accelerate.',
+    url: 'https://www.cypress.io/',
+    icon: 'https://www.cypress.io/favicon.svg',
+    tags: ['Frontend', 'Testing'],
+  },
+  {
+    name: 'Playwright',
+    description: 'Fast and reliable end-to-end testing for modern web apps',
+    url: 'https://playwright.dev/',
+    icon: 'https://playwright.dev/img/playwright-logo.svg',
+    tags: ['Frontend', 'Testing'],
+  },
+  {
+    name: 'ESLint',
+    description: 'Find and fix problems in your JavaScript code',
+    url: 'https://eslint.org/',
+    icon: 'https://eslint.org/icon.svg',
+    tags: ['Frontend', 'Code Quality'],
+  },
+  {
+    name: 'Prettier',
+    description: 'Opinionated Code Formatter',
+    url: 'https://prettier.io/',
+    icon: 'https://prettier.io/icon.png',
+    tags: ['Frontend', 'Code Quality'],
+  },
+  {
+    name: 'EditorConfig',
+    description: 'Maintain consistent coding styles between different editors',
+    url: 'https://editorconfig.org/',
+    icon: 'https://editorconfig.org/favicon.ico',
+    tags: ['Code Quality'],
+  },
+  {
+    name: 'TypeScript',
+    description: 'JavaScript with syntax for types.',
+    url: 'https://www.typescriptlang.org/',
+    icon: 'https://www.typescriptlang.org/icons/icon-96x96.png',
+    tags: ['Frontend', 'TypeScript'],
+  },
+  {
+    name: 'Tailwind CSS',
+    description:
+      'A utility-first CSS framework for rapidly building custom designs.',
+    url: 'https://tailwindcss.com/',
+    icon: 'https://tailwindcss.com/favicons/favicon-32x32.png',
+    tags: ['Frontend', 'Web Design', 'Tailwind CSS'],
+  },
+  {
+    name: 'DaisyUI',
+    description: 'The most popular component library for Tailwind CSS',
+    url: 'https://daisyui.com/',
+    icon: 'https://daisyui.com/favicon.ico',
+    tags: ['Frontend', 'Component library', 'Tailwind CSS'],
+  },
+  {
+    name: 'Shadcn',
+    description: 'Build your own component library',
+    url: 'https://ui.shadcn.com/',
+    icon: 'https://ui.shadcn.com/favicon.ico',
+    tags: ['Frontend', 'Component library', 'Tailwind CSS', 'React'],
+  },
+  {
+    name: 'Shadcn for Vue',
+    description: 'Build your own component library',
+    url: 'https://www.shadcn-vue.com/',
+    icon: 'https://www.shadcn-vue.com/favicon.ico',
+    tags: ['Frontend', 'Component library', 'Tailwind CSS', 'Vue'],
+  },
+  {
+    name: 'Shadcn for Svelte',
+    description: 'Build your own component library',
+    url: 'https://www.shadcn-svelte.com/',
+    icon: 'https://www.shadcn-svelte.com/favicon.ico',
+    tags: ['Frontend', 'Component library', 'Tailwind CSS', 'Svelte'],
+  },
+  {
+    name: 'spartan',
+    description: 'Cutting-edge tools powering Angular full-stack development',
+    url: 'https://www.spartan.ng/',
+    icon: 'https://www.spartan.ng/assets/spartan.svg',
+    tags: [
+      'Frontend',
+      'Angular',
+      'Fullstack',
+      'Tailwind CSS',
+      'Component library',
+    ],
+  },
+  {
+    name: 'Flowbite',
+    description:
+      'Build websites even faster with components on top of Tailwind CSS',
+    url: 'https://flowbite.com/',
+    icon: 'https://flowbite.com/favicon.ico',
+    tags: ['Frontend', 'Component library', 'Tailwind CSS'],
+  },
+  {
+    name: 'Angular Material',
+    description: 'Material Design components for Angular',
+    url: 'https://material.angular.io/',
+    icon: 'https://material.angular.io/assets/img/favicons/favicon.ico',
+    tags: ['Frontend', 'Angular', 'Component library'],
+  },
+  {
+    name: 'Heroicons',
+    description:
+      'Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS',
+    url: 'https://heroicons.com/',
+    icon: 'https://heroicons.com/favicon.ico',
+    tags: ['Frontend', 'Icons'],
+  },
+  {
+    name: 'Nx',
+    description: 'Smart Monorepos - Fast CI',
+    url: 'https://nx.dev/',
+    icon: 'https://nx.dev/favicon/favicon.svg',
+    tags: ['Frontend', 'Fullstack', 'Monorepo'],
+  },
+  {
+    name: 'UnoCSS',
+    description: 'Instant On-demand Atomic CSS Engine',
+    url: 'https://unocss.dev/',
+    icon: 'https://unocss.dev/favicon.ico',
+    tags: ['Frontend', 'Web Design'],
+  },
+  {
+    name: 'Mozilla Developer Network',
+    description:
+      'Documenting web technologies, including HTML, CSS, and JavaScript',
+    url: 'https://developer.mozilla.org/',
+    icon: 'https://developer.mozilla.org/favicon-48x48.png',
+    tags: ['Frontend', 'Documentation'],
+  },
+  {
+    name: 'Web.dev',
+    description: 'Building a bettwer web, together',
+    url: 'https://web.dev/',
+    icon: 'https://www.gstatic.com/devrel-devsite/prod/vc38a15f5a89ceb3dee5ad4d2d7b57b718d8556c0e3724a12c131a2b9d037d8c7/web/images/favicon.png',
+    tags: ['Frontend', 'Documentation'],
+  },
+  {
+    name: 'W3Schools',
+    description: "Learn to Code with the world's largest web developer site",
+    url: 'https://www.w3schools.com/',
+    icon: 'https://www.w3schools.com/favicon.ico',
+    tags: ['Frontend', 'Documentation'],
+  },
 ];
 
 export interface Link {
@@ -109,10 +266,7 @@ export interface Tag {
 
 export const Links: Link[] = links
   .map((link) => ({
-    name: link.name,
-    description: link.description,
-    url: link.url,
-    icon: link.icon,
+    ...link,
     tags: link.tags.map((tag) => ({ name: tag, url: `/bookmarks/${tag}` })),
   }))
   .sort((a, b) => a.name.localeCompare(b.name));
@@ -121,10 +275,7 @@ export const LinksWithTag = (tag: string): Link[] => {
   return links
     .filter((link) => link.tags.includes(tag))
     .map((link) => ({
-      name: link.name,
-      description: link.description,
-      url: link.url,
-      icon: link.icon,
+      ...link,
       tags: link.tags.map((tag) => ({ name: tag, url: `/bookmarks/${tag}` })),
     }))
     .sort((a, b) => a.name.localeCompare(b.name));
