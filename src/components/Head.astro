@@ -1,25 +1,25 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from 'astro:transitions'
 
 const siteInfo = {
   title: 'frokonet.ch',
   description: 'Personal portfolio site of Patrick Ineichen',
-  twitter: '@froko'
-};
+  twitter: '@froko',
+}
 
-let { title } = Astro.props;
-let { description } = Astro.props;
+let { title } = Astro.props
+let { description } = Astro.props
 
 if (!title) {
-  title = siteInfo.title;
+  title = siteInfo.title
 }
 
 if (!description) {
-  description = siteInfo.description;
+  description = siteInfo.description
 }
 
-let { img } = Astro.props;
-const previewImage = `${Astro.site}${img || 'me.png'}`;
+let { img } = Astro.props
+const previewImage = `${Astro.site}${img || 'me.png'}`
 ---
 
 <head>

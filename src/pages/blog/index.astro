@@ -1,9 +1,9 @@
 ---
-import { Page } from '@layout';
-import { FormattedDate } from '@library';
-import { getCollection } from 'astro:content';
+import { Page } from '@layout'
+import { FormattedDate } from '@library'
+import { getCollection } from 'astro:content'
 
-const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 ---
 
 <Page title="All Blog Posts">
@@ -12,11 +12,13 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueO
       <h1>All Blog Posts</h1>
       {
         posts.map((post) => (
-          <FormattedDate date={post.data.pubDate} />
-          <a href={`/blog/${post.slug}/`}>
-            <h2 class="my-0">{post.data.title}</h2>
-          </a>
-          <p class="mt-2 mb-10">{post.data.description}</p>
+          <>
+            <FormattedDate date={post.data.pubDate} />
+            <a href={`/blog/${post.slug}/`}>
+              <h2 class="my-0">{post.data.title}</h2>
+            </a>
+            <p class="mb-10 mt-2">{post.data.description}</p>
+          </>
         ))
       }
     </article>

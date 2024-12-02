@@ -1,1 +1,1 @@
-export { default as FormattedDate } from './FormattedDate.astro';
+export { default as FormattedDate } from './FormattedDate.astro'
