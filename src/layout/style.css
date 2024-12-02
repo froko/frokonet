@@ -20,11 +20,11 @@ article {
 }
 
 article img {
-  @apply rounded-lg mt-0;
+  @apply mt-0 rounded-lg;
 }
 
 a {
-  @apply no-underline text-white;
+  @apply text-white no-underline;
 }
 
 h1,

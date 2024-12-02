@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-import typography from '@tailwindcss/typography';
-import daisyui from 'daisyui';
+import typography from '@tailwindcss/typography'
+import daisyui from 'daisyui'
 
 export default {
   content: ['./src/**/*.{astro,tsx}'],
@@ -29,4 +29,4 @@ export default {
       },
     ],
   },
-};
+}

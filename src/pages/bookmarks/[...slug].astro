@@ -1,24 +1,24 @@
 ---
-import { type Link, LinksWithTag, LinkTags } from '@data';
-import { Page } from '@layout';
+import { type Link, LinksWithTag, LinkTags } from '@data'
+import { Page } from '@layout'
 
-import LinkCard from './_LinkCard.astro';
+import LinkCard from './_LinkCard.astro'
 
-export const prerender = true;
-const { slug } = Astro.params;
+export const prerender = true
+const { slug } = Astro.params
 
 export function getStaticPaths() {
-  return LinkTags.map((tag) => ({ params: { slug: tag.name } }));
+  return LinkTags.map((tag) => ({ params: { slug: tag.name } }))
 }
 
 if (!slug) {
-  return Astro.redirect('/bookmarks');
+  return Astro.redirect('/bookmarks')
 }
 
-const links = slug ? LinksWithTag(slug) : [];
+const links = slug ? LinksWithTag(slug) : []
 
 if (links.length === 0) {
-  return Astro.redirect('/bookmarks');
+  return Astro.redirect('/bookmarks')
 }
 ---
 

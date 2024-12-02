@@ -249,19 +249,19 @@ const links = [
     icon: 'https://www.w3schools.com/favicon.ico',
     tags: ['Frontend', 'Documentation'],
   },
-];
+]
 
 export interface Link {
-  name: string;
-  description: string;
-  url: string;
-  icon: string;
-  tags: Tag[];
+  name: string
+  description: string
+  url: string
+  icon: string
+  tags: Tag[]
 }
 
 export interface Tag {
-  name: string;
-  url: string;
+  name: string
+  url: string
 }
 
 export const Links: Link[] = links
@@ -269,7 +269,7 @@ export const Links: Link[] = links
     ...link,
     tags: link.tags.map((tag) => ({ name: tag, url: `/bookmarks/${tag}` })),
   }))
-  .sort((a, b) => a.name.localeCompare(b.name));
+  .sort((a, b) => a.name.localeCompare(b.name))
 
 export const LinksWithTag = (tag: string): Link[] => {
   return links
@@ -278,9 +278,9 @@ export const LinksWithTag = (tag: string): Link[] => {
       ...link,
       tags: link.tags.map((tag) => ({ name: tag, url: `/bookmarks/${tag}` })),
     }))
-    .sort((a, b) => a.name.localeCompare(b.name));
-};
+    .sort((a, b) => a.name.localeCompare(b.name))
+}
 
 export const LinkTags: Tag[] = [...new Set(links.flatMap((link) => link.tags))]
   .map((tag) => ({ name: tag, url: `/bookmarks/${tag}` }))
-  .sort((a, b) => a.name.localeCompare(b.name));
+  .sort((a, b) => a.name.localeCompare(b.name))
