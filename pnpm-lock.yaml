@@ -16,7 +16,7 @@ importers:
         version: 3.1.9(astro@4.16.18(@types/node@22.10.2)(rollup@4.29.1)(typescript@5.7.2))
       '@astrojs/preact':
         specifier: ^3.5.3
-        version: 3.5.4(@babel/core@7.26.0)(@types/node@22.10.2)(preact@10.25.3)
+        version: 3.5.4(@babel/core@7.26.0)(@types/node@22.10.2)(preact@10.25.4)
       '@astrojs/rss':
         specifier: ^4.0.9
         version: 4.0.10
@@ -34,13 +34,13 @@ importers:
         version: 4.16.18(@types/node@22.10.2)(rollup@4.29.1)(typescript@5.7.2)
       daisyui:
         specifier: ^4.12.14
-        version: 4.12.22(postcss@8.4.49)
+        version: 4.12.23(postcss@8.4.49)
       photoswipe:
         specifier: ^5.4.4
         version: 5.4.4
       preact:
         specifier: ^10.24.3
-        version: 10.25.3
+        version: 10.25.4
       sharp:
         specifier: ^0.33.5
         version: 0.33.5
@@ -1176,8 +1176,8 @@ packages:
     resolution: {integrity: sha512-pHJg+jbuFsCjz9iclQBqyL3B2HLCBF71BwVNujUYEvCeQMvV97R59MNK3R2+jgJ3a1fcZgI9B3vYgz8lzr/BFQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  daisyui@4.12.22:
-    resolution: {integrity: sha512-HDLWbmTnXxhE1MrMgSWjVgdRt+bVYHvfNbW3GTsyIokRSqTHonUTrxV3RhpPDjGIWaHt+ELtDCTYCtUFgL2/Nw==}
+  daisyui@4.12.23:
+    resolution: {integrity: sha512-EM38duvxutJ5PD65lO/AFMpcw+9qEy6XAZrTpzp7WyaPeO/l+F/Qiq0ECHHmFNcFXh5aVoALY4MGrrxtCiaQCQ==}
     engines: {node: '>=16.9.0'}
 
   debug@4.4.0:
@@ -2212,8 +2212,8 @@ packages:
     peerDependencies:
       preact: '>=10'
 
-  preact@10.25.3:
-    resolution: {integrity: sha512-dzQmIFtM970z+fP9ziQ3yG4e3ULIbwZzJ734vaMVUTaKQ2+Ru1Ou/gjshOYVHCcd1rpAelC6ngjvjDXph98unQ==}
+  preact@10.25.4:
+    resolution: {integrity: sha512-jLdZDb+Q+odkHJ+MpW/9U5cODzqnB+fy2EiHSZES7ldV5LK7yjlVzTp7R8Xy6W6y75kfK8iWYtFVH7lvjwrCMA==}
 
   preferred-pm@4.0.0:
     resolution: {integrity: sha512-gYBeFTZLu055D8Vv3cSPox/0iTPtkzxpLroSYYA7WXgRi31WCJ51Uyl8ZiPeUUjyvs2MBzK+S8v9JVUgHU/Sqw==}
@@ -3032,15 +3032,15 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/preact@3.5.4(@babel/core@7.26.0)(@types/node@22.10.2)(preact@10.25.3)':
+  '@astrojs/preact@3.5.4(@babel/core@7.26.0)(@types/node@22.10.2)(preact@10.25.4)':
     dependencies:
       '@babel/plugin-transform-react-jsx': 7.25.9(@babel/core@7.26.0)
       '@babel/plugin-transform-react-jsx-development': 7.25.9(@babel/core@7.26.0)
-      '@preact/preset-vite': 2.8.2(@babel/core@7.26.0)(preact@10.25.3)(vite@5.4.11(@types/node@22.10.2))
-      '@preact/signals': 1.3.1(preact@10.25.3)
+      '@preact/preset-vite': 2.8.2(@babel/core@7.26.0)(preact@10.25.4)(vite@5.4.11(@types/node@22.10.2))
+      '@preact/signals': 1.3.1(preact@10.25.4)
       babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.26.0)
-      preact: 10.25.3
-      preact-render-to-string: 6.5.12(preact@10.25.3)
+      preact: 10.25.4
+      preact-render-to-string: 6.5.12(preact@10.25.4)
       vite: 5.4.11(@types/node@22.10.2)
     transitivePeerDependencies:
       - '@babel/core'
@@ -3544,12 +3544,12 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
-  '@preact/preset-vite@2.8.2(@babel/core@7.26.0)(preact@10.25.3)(vite@5.4.11(@types/node@22.10.2))':
+  '@preact/preset-vite@2.8.2(@babel/core@7.26.0)(preact@10.25.4)(vite@5.4.11(@types/node@22.10.2))':
     dependencies:
       '@babel/core': 7.26.0
       '@babel/plugin-transform-react-jsx': 7.25.9(@babel/core@7.26.0)
       '@babel/plugin-transform-react-jsx-development': 7.25.9(@babel/core@7.26.0)
-      '@prefresh/vite': 2.4.6(preact@10.25.3)(vite@5.4.11(@types/node@22.10.2))
+      '@prefresh/vite': 2.4.6(preact@10.25.4)(vite@5.4.11(@types/node@22.10.2))
       '@rollup/pluginutils': 4.2.1
       babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.26.0)
       debug: 4.4.0
@@ -3566,27 +3566,27 @@ snapshots:
 
   '@preact/signals-core@1.8.0': {}
 
-  '@preact/signals@1.3.1(preact@10.25.3)':
+  '@preact/signals@1.3.1(preact@10.25.4)':
     dependencies:
       '@preact/signals-core': 1.8.0
-      preact: 10.25.3
+      preact: 10.25.4
 
   '@prefresh/babel-plugin@0.5.1': {}
 
-  '@prefresh/core@1.5.3(preact@10.25.3)':
+  '@prefresh/core@1.5.3(preact@10.25.4)':
     dependencies:
-      preact: 10.25.3
+      preact: 10.25.4
 
   '@prefresh/utils@1.2.0': {}
 
-  '@prefresh/vite@2.4.6(preact@10.25.3)(vite@5.4.11(@types/node@22.10.2))':
+  '@prefresh/vite@2.4.6(preact@10.25.4)(vite@5.4.11(@types/node@22.10.2))':
     dependencies:
       '@babel/core': 7.26.0
       '@prefresh/babel-plugin': 0.5.1
-      '@prefresh/core': 1.5.3(preact@10.25.3)
+      '@prefresh/core': 1.5.3(preact@10.25.4)
       '@prefresh/utils': 1.2.0
       '@rollup/pluginutils': 4.2.1
-      preact: 10.25.3
+      preact: 10.25.4
       vite: 5.4.11(@types/node@22.10.2)
     transitivePeerDependencies:
       - supports-color
@@ -4225,7 +4225,7 @@ snapshots:
 
   culori@3.3.0: {}
 
-  daisyui@4.12.22(postcss@8.4.49):
+  daisyui@4.12.23(postcss@8.4.49):
     dependencies:
       css-selector-tokenizer: 0.8.0
       culori: 3.3.0
@@ -5603,11 +5603,11 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  preact-render-to-string@6.5.12(preact@10.25.3):
+  preact-render-to-string@6.5.12(preact@10.25.4):
     dependencies:
-      preact: 10.25.3
+      preact: 10.25.4
 
-  preact@10.25.3: {}
+  preact@10.25.4: {}
 
   preferred-pm@4.0.0:
     dependencies:
