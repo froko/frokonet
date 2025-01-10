@@ -3,13 +3,15 @@ import './style.css'
 
 import { Head, NavBar } from '@components'
 
-const { title, description, img } = Astro.props
+const { title, description, img, hideNavTitle } = Astro.props
+
+console.log({ title, description, img, hideNavTitle })
 ---
 
 <html lang="en">
   <Head title={title} description={description} img={img} />
   <body>
-    <NavBar />
+    <NavBar {hideNavTitle} />
     <main>
       <slot />
     </main>

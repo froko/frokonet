@@ -1,12 +1,27 @@
 ---
 import { CloseIcon, HamburgerIcon } from '@components'
 import { nav } from '@data'
+import { Image } from 'astro:assets'
+
+import me from '/public/me.jpg'
+
+const { hideNavTitle } = Astro.props
 ---
 
 <nav class="navbar sticky top-0 z-10 bg-opacity-20 backdrop-blur-lg">
-  <div class="flex-1">
-    <a href={Astro.site} class="text-xl font-bold md:ml-2 md:text-2xl">{Astro.url.hostname}</a>
-  </div>
+  {
+    hideNavTitle && (
+      <span class="text-xl font-bold md:text-2xl">Hi! 👋</span>
+    )
+  }
+  {
+    !hideNavTitle && (
+      <Image src={me} alt="Me" class="w-8 h-8 rounded-full mr-2 md:mx-2" />
+      <a href="/" class="text-xl font-bold md:text-2xl">
+        Patrick Ineichen
+      </a>
+    )
+  }
   <div class="absolute right-4">
     <div class="drawer drawer-end">
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />
