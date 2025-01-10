@@ -7,20 +7,18 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueO
 ---
 
 <Page title="All Blog Posts">
-  <div class="container md:mt-8">
-    <article>
-      <h1>All Blog Posts</h1>
-      {
-        posts.map((post) => (
-          <>
-            <FormattedDate date={post.data.pubDate} />
-            <a href={`/blog/${post.slug}/`}>
-              <h2 class="my-0">{post.data.title}</h2>
-            </a>
-            <p class="mb-10 mt-2">{post.data.description}</p>
-          </>
-        ))
-      }
-    </article>
+  <div class="container">
+    <h1>All Blog Posts</h1>
+    {
+      posts.map((post) => (
+        <>
+          <FormattedDate date={post.data.pubDate} />
+          <a href={`/blog/${post.slug}/`}>
+            <h2 class="my-0">{post.data.title}</h2>
+          </a>
+          <p class="mb-10 mt-2">{post.data.description}</p>
+        </>
+      ))
+    }
   </div>
 </Page>

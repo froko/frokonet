@@ -7,16 +7,16 @@ const imageFiles = await Astro.glob('/public/cats/*')
 
 <Page title="Joslyn & Jerome">
   <div class="container">
-    <h1 class="px-4">Joslyn & Jerome</h1>
-    <p class="p-4">
+    <h1>Joslyn & Jerome</h1>
+    <p class="my-4">
       Our two Ragdolls named Joslyn and Jerome live with us since August 2022. We got them from the
       <a href="https://kandergarden.ch/" class="font-bold text-white">Kandergarden Catery</a>.
     </p>
 
-    <div class="mx-auto w-full columns-1 gap-3 px-4 sm:hidden">
+    <div class="mx-auto w-full columns-1 gap-4 sm:hidden">
       {imageFiles.map((img) => <Image src={img.default} width="300" alt="Cats" class="mb-3 w-full rounded" />)}
     </div>
-    <div id="cats" class="mx-auto mb-5 hidden w-full gap-3 px-4 sm:block sm:columns-2 md:columns-3 lg:columns-4">
+    <div id="cats" class="mx-auto mb-5 hidden w-full gap-4 sm:block sm:columns-2 md:columns-3 lg:columns-4">
       {
         imageFiles.map(async (img) => {
           const optimizedImage = await getImage({ src: img.default, height: 800 })
