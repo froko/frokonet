@@ -5,7 +5,7 @@ import { nav } from '@data'
 
 <nav class="navbar sticky top-0 z-10 bg-opacity-20 backdrop-blur-lg">
   <div class="flex-1">
-    <a href={Astro.site} class="text-xl font-bold md:text-2xl">frokonet.ch</a>
+    <a href={Astro.site} class="text-xl font-bold md:ml-2 md:text-2xl">{Astro.url.hostname}</a>
   </div>
   <div class="absolute right-4">
     <div class="drawer drawer-end">
