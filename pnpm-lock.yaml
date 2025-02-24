@@ -13,10 +13,10 @@ importers:
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.1)(typescript@5.7.3)
       '@astrojs/mdx':
         specifier: ^4.0.0
-        version: 4.0.8(astro@5.3.0(@types/node@22.13.4)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0))
+        version: 4.0.8(astro@5.3.0(@types/node@22.13.5)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0))
       '@astrojs/preact':
         specifier: ^4.0.0
-        version: 4.0.4(@babel/core@7.26.9)(@types/node@22.13.4)(jiti@1.21.7)(preact@10.26.0)(yaml@2.7.0)
+        version: 4.0.4(@babel/core@7.26.9)(@types/node@22.13.5)(jiti@1.21.7)(preact@10.26.2)(yaml@2.7.0)
       '@astrojs/rss':
         specifier: ^4.0.9
         version: 4.0.11
@@ -25,13 +25,13 @@ importers:
         version: 3.2.1
       '@astrojs/tailwind':
         specifier: ^5.1.2
-        version: 5.1.5(astro@5.3.0(@types/node@22.13.4)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0))(tailwindcss@3.4.17)
+        version: 5.1.5(astro@5.3.0(@types/node@22.13.5)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0))(tailwindcss@3.4.17)
       '@tailwindcss/typography':
         specifier: ^0.5.15
         version: 0.5.16(tailwindcss@3.4.17)
       astro:
         specifier: ^5.0.0
-        version: 5.3.0(@types/node@22.13.4)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0)
+        version: 5.3.0(@types/node@22.13.5)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0)
       daisyui:
         specifier: ^4.12.14
         version: 4.12.23(postcss@8.5.2)
@@ -40,7 +40,7 @@ importers:
         version: 5.4.4
       preact:
         specifier: ^10.24.3
-        version: 10.26.0
+        version: 10.26.2
       sharp:
         specifier: ^0.33.5
         version: 0.33.5
@@ -56,7 +56,7 @@ importers:
         version: 1.2.0
       '@types/node':
         specifier: ^22.9.0
-        version: 22.13.4
+        version: 22.13.5
       eslint-plugin-astro:
         specifier: ^1.3.1
         version: 1.3.1(eslint@9.20.1(jiti@1.21.7))
@@ -832,8 +832,8 @@ packages:
   '@types/node@17.0.45':
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
 
-  '@types/node@22.13.4':
-    resolution: {integrity: sha512-ywP2X0DYtX3y08eFVx5fNIw7/uIv8hYUKgXoK8oayJlLnKcRfEYCxWMVE1XagUdVtCJlZT1AU4LXEABW+L1Peg==}
+  '@types/node@22.13.5':
+    resolution: {integrity: sha512-+lTU0PxZXn0Dr1NBtC7Y8cR21AJr87dLLU953CWA6pMxxv/UDc7jYAY90upcrie1nRcD6XNG5HOYEDtgW5TxAg==}
 
   '@types/sax@1.2.7':
     resolution: {integrity: sha512-rO73L89PJxeYM3s3pPPjiPgVVcymqU490g0YO5n5By0k2Erzj6tay/4lr1CHAAU4JyOWd1rpQ8bCf6cZfHU96A==}
@@ -2177,8 +2177,8 @@ packages:
     peerDependencies:
       preact: '>=10'
 
-  preact@10.26.0:
-    resolution: {integrity: sha512-6ugi/Mb7lyV5RA6KlnijFyDLMU253i7L0RRiObIzDoqj59KT9iTeNJbA/YGw6M7jP4vxaab0DOA8DgodTOA6EQ==}
+  preact@10.26.2:
+    resolution: {integrity: sha512-0gNmv4qpS9HaN3+40CLBAnKe0ZfyE4ZWo5xKlC1rVrr0ckkEvJvAQqKaHANdFKsGstoxrY4AItZ7kZSGVoVjgg==}
 
   preferred-pm@4.1.1:
     resolution: {integrity: sha512-rU+ZAv1Ur9jAUZtGPebQVQPzdGhNzaEiQ7VL9+cjsAWPHFYOccNXPNiev1CCDSOg/2j7UujM7ojNhpkuILEVNQ==}
@@ -3054,12 +3054,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.0.8(astro@5.3.0(@types/node@22.13.4)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0))':
+  '@astrojs/mdx@4.0.8(astro@5.3.0(@types/node@22.13.5)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0))':
     dependencies:
       '@astrojs/markdown-remark': 6.1.0
       '@mdx-js/mdx': 3.1.0(acorn@8.14.0)
       acorn: 8.14.0
-      astro: 5.3.0(@types/node@22.13.4)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0)
+      astro: 5.3.0(@types/node@22.13.5)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0)
       es-module-lexer: 1.6.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.4
@@ -3073,16 +3073,16 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/preact@4.0.4(@babel/core@7.26.9)(@types/node@22.13.4)(jiti@1.21.7)(preact@10.26.0)(yaml@2.7.0)':
+  '@astrojs/preact@4.0.4(@babel/core@7.26.9)(@types/node@22.13.5)(jiti@1.21.7)(preact@10.26.2)(yaml@2.7.0)':
     dependencies:
       '@babel/plugin-transform-react-jsx': 7.25.9(@babel/core@7.26.9)
       '@babel/plugin-transform-react-jsx-development': 7.25.9(@babel/core@7.26.9)
-      '@preact/preset-vite': 2.10.1(@babel/core@7.26.9)(preact@10.26.0)(vite@6.1.0(@types/node@22.13.4)(jiti@1.21.7)(yaml@2.7.0))
-      '@preact/signals': 2.0.1(preact@10.26.0)
+      '@preact/preset-vite': 2.10.1(@babel/core@7.26.9)(preact@10.26.2)(vite@6.1.0(@types/node@22.13.5)(jiti@1.21.7)(yaml@2.7.0))
+      '@preact/signals': 2.0.1(preact@10.26.2)
       babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.26.9)
-      preact: 10.26.0
-      preact-render-to-string: 6.5.13(preact@10.26.0)
-      vite: 6.1.0(@types/node@22.13.4)(jiti@1.21.7)(yaml@2.7.0)
+      preact: 10.26.2
+      preact-render-to-string: 6.5.13(preact@10.26.2)
+      vite: 6.1.0(@types/node@22.13.5)(jiti@1.21.7)(yaml@2.7.0)
     transitivePeerDependencies:
       - '@babel/core'
       - '@types/node'
@@ -3113,9 +3113,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.24.2
 
-  '@astrojs/tailwind@5.1.5(astro@5.3.0(@types/node@22.13.4)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0))(tailwindcss@3.4.17)':
+  '@astrojs/tailwind@5.1.5(astro@5.3.0(@types/node@22.13.5)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0))(tailwindcss@3.4.17)':
     dependencies:
-      astro: 5.3.0(@types/node@22.13.4)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0)
+      astro: 5.3.0(@types/node@22.13.5)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0)
       autoprefixer: 10.4.20(postcss@8.5.2)
       postcss: 8.5.2
       postcss-load-config: 4.0.2(postcss@8.5.2)
@@ -3600,17 +3600,17 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
-  '@preact/preset-vite@2.10.1(@babel/core@7.26.9)(preact@10.26.0)(vite@6.1.0(@types/node@22.13.4)(jiti@1.21.7)(yaml@2.7.0))':
+  '@preact/preset-vite@2.10.1(@babel/core@7.26.9)(preact@10.26.2)(vite@6.1.0(@types/node@22.13.5)(jiti@1.21.7)(yaml@2.7.0))':
     dependencies:
       '@babel/core': 7.26.9
       '@babel/plugin-transform-react-jsx': 7.25.9(@babel/core@7.26.9)
       '@babel/plugin-transform-react-jsx-development': 7.25.9(@babel/core@7.26.9)
-      '@prefresh/vite': 2.4.7(preact@10.26.0)(vite@6.1.0(@types/node@22.13.4)(jiti@1.21.7)(yaml@2.7.0))
+      '@prefresh/vite': 2.4.7(preact@10.26.2)(vite@6.1.0(@types/node@22.13.5)(jiti@1.21.7)(yaml@2.7.0))
       '@rollup/pluginutils': 4.2.1
       babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.26.9)
       debug: 4.4.0
       kolorist: 1.8.0
-      vite: 6.1.0(@types/node@22.13.4)(jiti@1.21.7)(yaml@2.7.0)
+      vite: 6.1.0(@types/node@22.13.5)(jiti@1.21.7)(yaml@2.7.0)
       vite-prerender-plugin: 0.5.6
     transitivePeerDependencies:
       - preact
@@ -3618,28 +3618,28 @@ snapshots:
 
   '@preact/signals-core@1.8.0': {}
 
-  '@preact/signals@2.0.1(preact@10.26.0)':
+  '@preact/signals@2.0.1(preact@10.26.2)':
     dependencies:
       '@preact/signals-core': 1.8.0
-      preact: 10.26.0
+      preact: 10.26.2
 
   '@prefresh/babel-plugin@0.5.1': {}
 
-  '@prefresh/core@1.5.3(preact@10.26.0)':
+  '@prefresh/core@1.5.3(preact@10.26.2)':
     dependencies:
-      preact: 10.26.0
+      preact: 10.26.2
 
   '@prefresh/utils@1.2.0': {}
 
-  '@prefresh/vite@2.4.7(preact@10.26.0)(vite@6.1.0(@types/node@22.13.4)(jiti@1.21.7)(yaml@2.7.0))':
+  '@prefresh/vite@2.4.7(preact@10.26.2)(vite@6.1.0(@types/node@22.13.5)(jiti@1.21.7)(yaml@2.7.0))':
     dependencies:
       '@babel/core': 7.26.9
       '@prefresh/babel-plugin': 0.5.1
-      '@prefresh/core': 1.5.3(preact@10.26.0)
+      '@prefresh/core': 1.5.3(preact@10.26.2)
       '@prefresh/utils': 1.2.0
       '@rollup/pluginutils': 4.2.1
-      preact: 10.26.0
-      vite: 6.1.0(@types/node@22.13.4)(jiti@1.21.7)(yaml@2.7.0)
+      preact: 10.26.2
+      vite: 6.1.0(@types/node@22.13.5)(jiti@1.21.7)(yaml@2.7.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -3792,13 +3792,13 @@ snapshots:
 
   '@types/node@17.0.45': {}
 
-  '@types/node@22.13.4':
+  '@types/node@22.13.5':
     dependencies:
       undici-types: 6.20.0
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 22.13.4
+      '@types/node': 22.13.5
 
   '@types/unist@2.0.11': {}
 
@@ -4005,7 +4005,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro@5.3.0(@types/node@22.13.4)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0):
+  astro@5.3.0(@types/node@22.13.5)(jiti@1.21.7)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0):
     dependencies:
       '@astrojs/compiler': 2.10.4
       '@astrojs/internal-helpers': 0.5.1
@@ -4057,8 +4057,8 @@ snapshots:
       unist-util-visit: 5.0.0
       unstorage: 1.14.4
       vfile: 6.0.3
-      vite: 6.1.0(@types/node@22.13.4)(jiti@1.21.7)(yaml@2.7.0)
-      vitefu: 1.0.5(vite@6.1.0(@types/node@22.13.4)(jiti@1.21.7)(yaml@2.7.0))
+      vite: 6.1.0(@types/node@22.13.5)(jiti@1.21.7)(yaml@2.7.0)
+      vitefu: 1.0.5(vite@6.1.0(@types/node@22.13.5)(jiti@1.21.7)(yaml@2.7.0))
       which-pm: 3.0.1
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
@@ -5625,11 +5625,11 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  preact-render-to-string@6.5.13(preact@10.26.0):
+  preact-render-to-string@6.5.13(preact@10.26.2):
     dependencies:
-      preact: 10.26.0
+      preact: 10.26.2
 
-  preact@10.26.0: {}
+  preact@10.26.2: {}
 
   preferred-pm@4.1.1:
     dependencies:
@@ -6220,20 +6220,20 @@ snapshots:
       source-map: 0.7.4
       stack-trace: 1.0.0-pre2
 
-  vite@6.1.0(@types/node@22.13.4)(jiti@1.21.7)(yaml@2.7.0):
+  vite@6.1.0(@types/node@22.13.5)(jiti@1.21.7)(yaml@2.7.0):
     dependencies:
       esbuild: 0.24.2
       postcss: 8.5.2
       rollup: 4.34.8
     optionalDependencies:
-      '@types/node': 22.13.4
+      '@types/node': 22.13.5
       fsevents: 2.3.3
       jiti: 1.21.7
       yaml: 2.7.0
 
-  vitefu@1.0.5(vite@6.1.0(@types/node@22.13.4)(jiti@1.21.7)(yaml@2.7.0)):
+  vitefu@1.0.5(vite@6.1.0(@types/node@22.13.5)(jiti@1.21.7)(yaml@2.7.0)):
     optionalDependencies:
-      vite: 6.1.0(@types/node@22.13.4)(jiti@1.21.7)(yaml@2.7.0)
+      vite: 6.1.0(@types/node@22.13.5)(jiti@1.21.7)(yaml@2.7.0)
 
   volar-service-css@0.0.62(@volar/language-service@2.4.11):
     dependencies:
