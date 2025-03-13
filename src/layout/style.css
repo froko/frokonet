@@ -1,5 +1,21 @@
-:root {
-  --padding-card: 1rem;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap');
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: 'macchiato';
+  color-scheme: 'dark';
+  --color-base-100: #24273a;
+  --color-base-200: #1e2030;
+  --color-base-300: #181926;
+  --color-primary: #8aadf4;
+  --color-accent-content: #150d13;
+  --color-secondary: #f5bde6;
+  --color-secondary-content: #150d13;
+}
+
+@theme {
+  --font-sans: 'Lato';
 }
 
 body {
@@ -10,17 +26,11 @@ body {
 
 body,
 html {
-  height: 100%;
-  overflow-x: hidden;
   @apply scroll-smooth;
 }
 
 article {
   @apply prose md:prose-xl;
-}
-
-article img {
-  @apply mt-0 rounded-lg;
 }
 
 a {
@@ -31,30 +41,19 @@ h1,
 h2,
 h3 {
   @apply text-primary;
+  @apply m-0;
 }
 
 h1 {
-  @apply text-[2.24rem] md:text-[2.8rem] !important;
-  font-weight: 800 !important;
+  @apply text-[2.2rem] font-bold md:text-[2.8rem];
+  @apply mb-6;
 }
 
 h2 {
-  @apply text-[1.5rem] md:text-[1.8rem] !important;
-  font-weight: 700 !important;
+  @apply text-[1.5rem] font-bold md:text-[1.8rem];
+  @apply mb-4;
 }
 
-.card-title {
-  @apply mt-2;
-}
-
-figure {
-  @apply my-0;
-}
-
-img {
-  @apply w-full;
-}
-
-.container {
-  @apply mx-auto max-w-3xl px-2 sm:px-4 lg:max-w-4xl lg:px-8 xl:max-w-6xl;
+.wrapper {
+  @apply mx-auto px-2 lg:max-w-4xl;
 }
