@@ -8,7 +8,7 @@ import me from '/public/me.jpg'
 const { navBarTitle } = Astro.props
 ---
 
-<nav class="navbar sticky top-0 z-10 bg-opacity-20 backdrop-blur-lg">
+<nav class="navbar sticky top-0 z-10 backdrop-blur-lg">
   {navBarTitle && <span class="ml-2 text-xl font-bold md:text-2xl">{navBarTitle}</span>}
   {
     !navBarTitle && (
@@ -31,7 +31,7 @@ const { navBarTitle } = Astro.props
 
       <div class="drawer-side">
         <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-        <ul class="menu min-h-full min-w-fit bg-base-200 bg-opacity-80 p-4 pt-20 text-2xl font-bold">
+        <ul class="menu bg-base-200 bg-opacity-80 min-h-full min-w-fit p-4 pt-20 text-2xl font-bold">
           {
             nav.map((item) => (
               <li class="mt-8">

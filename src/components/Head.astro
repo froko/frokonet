@@ -6,19 +6,7 @@ const siteInfo = {
   description: 'Personal portfolio site',
 }
 
-let { title } = Astro.props
-let { description } = Astro.props
-
-if (!title) {
-  title = siteInfo.title
-}
-
-if (!description) {
-  description = siteInfo.description
-}
-
-let { img } = Astro.props
-const previewImage = `${Astro.site}${img || 'me.png'}`
+let { title = siteInfo.title, description = siteInfo.description, img = 'me.png' } = Astro.props
 ---
 
 <head>
@@ -35,13 +23,10 @@ const previewImage = `${Astro.site}${img || 'me.png'}`
   <!-- open graph -->
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:image" content={previewImage} />
+  <meta property="og:image" content={new URL(img, Astro.url)} />
   <meta property="og:image:alt" content={title} />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={Astro.site} />
-
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet" />
 
   <!-- sitemap -->
   <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />

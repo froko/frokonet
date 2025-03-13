@@ -8,15 +8,15 @@ import { Image } from 'astro:assets'
 const { title, description, pubDate, updatedDate, cover, coverAlt } = Astro.props
 ---
 
-<html lang="en">
+<html lang="en" data-theme="macchiato">
   <Head title={title} description={description} img={cover} />
   <body>
     <NavBar />
     <main>
-      <div class="container">
+      <div class="wrapper">
         <article>
           <ArrowLink href="/blog">All Blog Posts</ArrowLink>
-          <Image src={cover} alt={coverAlt} />
+          <Image src={cover} alt={coverAlt} class="rounded-xl" />
           <div>
             <FormattedDate date={pubDate} />
             {

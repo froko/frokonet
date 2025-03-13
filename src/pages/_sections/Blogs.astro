@@ -7,7 +7,7 @@ const posts = (await getCollection('blog'))
   .slice(0, 6)
 ---
 
-<section id="blogs" class="container pt-20">
+<section id="blogs" class="wrapper pt-20">
   <article>
     <h1>Recent Blog Posts</h1>
     {
@@ -17,7 +17,7 @@ const posts = (await getCollection('blog'))
           <a href={`/blog/${post.slug}/`}>
             <h2 class="my-0">{post.data.title}</h2>
           </a>
-          <p class="mb-10 mt-2">{post.data.description}</p>
+          <p class="mt-2 mb-10">{post.data.description}</p>
         </>
       ))
     }
