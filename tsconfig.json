@@ -8,7 +8,8 @@
       "@components": ["./src/components/index.ts"],
       "@data": ["./src/data/index.ts"],
       "@layout": ["./src/layout/index.ts"],
-      "@library": ["./src/library/index.ts"]
-    }
-  }
+      "@library": ["./src/library/index.ts"],
+      "@sections": ["./src/pages/_sections/index.ts"],
+    },
+  },
 }
