@@ -1,0 +1,106 @@
+---
+import { nav } from '@data'
+import { Image } from 'astro:assets'
+
+import me from '/public/me.jpg'
+
+const { navBarTitle } = Astro.props
+---
+
+<nav class="navbar sticky top-0 z-10 backdrop-blur-lg">
+  {
+    navBarTitle && (
+      <span class="ml-2 text-xl font-bold md:text-2xl">{navBarTitle}</span>
+    )
+  }
+  {
+    !navBarTitle && (
+      <>
+        <Image src={me} alt="Me" class="mr-2 h-8 w-8 rounded-full md:mx-2" />
+        <a href="/" class="text-xl font-bold md:text-2xl">
+          Patrick Ineichen
+        </a>
+      </>
+    )
+  }
+  <div class="absolute right-4">
+    <div class="drawer drawer-end">
+      <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+
+      <label for="my-drawer" class="btn btn-circle relative z-100">
+        <div class="menu-icon">
+          <svg
+            class="hamburger text-base-content fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 512 512">
+            <path
+              d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"
+            ></path>
+          </svg>
+          <svg
+            class="close-icon text-base-content fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 512 512">
+            <polygon
+              points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"
+            ></polygon>
+          </svg>
+        </div>
+      </label>
+
+      <div class="drawer-side">
+        <label
+          for="my-drawer"
+          aria-label="close sidebar"
+          class="drawer-overlay">
+        </label>
+        <ul
+          class="menu bg-base-200 bg-opacity-80 min-h-full min-w-fit p-4 pt-20 text-2xl font-bold">
+          {
+            nav.map((item) => (
+              <li class="mt-8">
+                <a href={item.slug}>{item.title}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style define:vars={{}}>
+  /* Custom menu icon animation */
+  .menu-icon {
+    position: relative;
+    width: 32px;
+    height: 32px;
+  }
+
+  .hamburger,
+  .close-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+  }
+
+  .close-icon {
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+
+  .drawer-toggle:checked + label .hamburger {
+    opacity: 0;
+    transform: rotate(-45deg);
+  }
+
+  .drawer-toggle:checked + label .close-icon {
+    opacity: 1;
+    transform: rotate(0);
+  }
+</style>
