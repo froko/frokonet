@@ -1,0 +1,59 @@
+---
+import { Article } from '@layout'
+import type { CollectionEntry } from 'astro:content'
+import { getCollection } from 'astro:content'
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog')
+  return posts
+    .filter((post: CollectionEntry<'blog'>) => !post.data.draft)
+    .map((post: CollectionEntry<'blog'>) => ({
+      params: { slug: post.slug },
+      props: post,
+    }))
+}
+
+type Props = CollectionEntry<'blog'>
+
+const post = Astro.props
+const { Content } = await post.render()
+
+const { title, description, pubDate, author, tags } = post.data
+
+const formattedDate = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+}).format(pubDate)
+---
+
+<Article title={title} description={description}>
+  <div class="mx-auto max-w-3xl px-4 py-8">
+    <a
+      href="/blog"
+      class="text-primary mb-8 inline-flex items-center font-sans hover:underline">
+      ← Back to Blog
+    </a>
+
+    <header class="mb-8">
+      <h1 class="mb-4 font-serif text-4xl font-bold md:text-5xl">{title}</h1>
+      <div
+        class="flex flex-wrap items-center gap-4 font-sans text-sm font-light text-gray-500">
+        <time datetime={pubDate.toISOString()}>{formattedDate}</time>
+        <span>•</span>
+        <span>By {author}</span>
+      </div>
+      {
+        tags.length > 0 && (
+          <div class="mt-4 flex flex-wrap gap-2">
+            {tags.map((tag: string) => (
+              <span class="badge badge-outline font-sans text-xs">{tag}</span>
+            ))}
+          </div>
+        )
+      }
+    </header>
+
+    <Content />
+  </div>
+</Article>

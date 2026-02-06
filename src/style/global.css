@@ -7,12 +7,22 @@
 }
 @plugin './catppuccinTheme.macchiato.ts';
 
+@theme {
+  --font-sans: 'Sora', system-ui, sans-serif;
+  --font-serif: 'Bitter', Georgia, serif;
+}
+
 body {
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
 article {
-  @apply prose md:prose-xl;
+  @apply prose md:prose-xl prose-headings:font-serif prose-p:font-serif prose-li:font-serif prose-blockquote:font-serif;
+
+  a {
+    @apply no-underline;
+  }
 }

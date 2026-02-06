@@ -7,17 +7,17 @@ import me from '/public/me.jpg'
 const { navBarTitle } = Astro.props
 ---
 
-<nav class="navbar sticky top-0 z-10 backdrop-blur-lg">
+<nav class="navbar sticky top-0 z-10 font-sans backdrop-blur-lg">
   {
     navBarTitle && (
-      <span class="ml-2 text-xl font-bold md:text-2xl">{navBarTitle}</span>
+      <span class="ml-2 text-xl font-semibold md:text-2xl">{navBarTitle}</span>
     )
   }
   {
     !navBarTitle && (
       <>
         <Image src={me} alt="Me" class="mr-2 h-8 w-8 rounded-full md:mx-2" />
-        <a href="/" class="text-xl font-bold md:text-2xl">
+        <a href="/" class="text-xl font-semibold md:text-2xl">
           Patrick Ineichen
         </a>
       </>
