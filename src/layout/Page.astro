@@ -8,10 +8,11 @@ const { title, description, img, navBarTitle } = Astro.props
 
 <html lang="en" data-theme="macchiato" class="scroll-smooth">
   <Head title={title} description={description} img={img} />
-  <body class="min-h-svh overflow-hidden overflow-y-auto">
-    <NavBar {navBarTitle} />
-    <main class="mx-auto md:px-4 lg:max-w-5xl">
-      <slot />
-    </main>
+  <body class="min-h-svh">
+    <NavBar {navBarTitle}>
+      <main class="mx-auto md:px-4 lg:max-w-5xl">
+        <slot />
+      </main>
+    </NavBar>
   </body>
 </html>
