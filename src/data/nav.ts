@@ -8,6 +8,10 @@ export const nav = [
     slug: '/blog',
   },
   {
+    title: 'Portfolio',
+    slug: '/portfolio',
+  },
+  {
     title: 'Bookmarks',
     slug: '/bookmarks',
   },
