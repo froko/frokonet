@@ -1,0 +1,21 @@
+---
+import { bands } from '@data'
+import { Page } from '@layout'
+
+import BandCard from '../components/BandCard.astro'
+---
+
+<Page>
+  <section class="container mx-auto px-4 py-12">
+    <div class="mx-auto max-w-4xl">
+      <h1 class="mb-4 font-serif text-4xl font-bold md:text-5xl">Music</h1>
+      <p class="text-base-content/80 mb-12 font-sans text-lg">
+        The bands I'm playing with and performing in.
+      </p>
+
+      <div class="grid auto-rows-fr gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {bands.map((band) => <BandCard band={band} />)}
+      </div>
+    </div>
+  </section>
+</Page>

@@ -12,8 +12,8 @@ export const nav = [
     slug: '/portfolio',
   },
   {
-    title: 'Bookmarks',
-    slug: '/bookmarks',
+    title: 'Music',
+    slug: '/music',
   },
   {
     title: 'Joslyn & Jerome',
